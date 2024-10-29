@@ -32,5 +32,6 @@
         <p>La lista dei videogiochi è vuota.</p>
         @endforelse
     </div>
+    <div><a href="videogame/create">Create a new Kingdom Hearts game</a></div>
 </main>
 @endsection

@@ -26,7 +26,17 @@ class VideogameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newVideogame = new Videogame;
+        $newVideogame->title = $data['title'];
+        $newVideogame->releaseYearJP = $data['releaseYearJP'];
+        $newVideogame->releaseYearWW = $data['releaseYearWW'];
+        $newVideogame->console = $data['console'];
+        $newVideogame->coverImage = $data['coverImage'];
+        $newVideogame->save();
+
+        return redirect()->route('videogame.index');
     }
 
     /**

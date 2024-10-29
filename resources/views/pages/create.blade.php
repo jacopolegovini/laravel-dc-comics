@@ -26,10 +26,14 @@
                 <label for="videogame-console" class="form-label">Console:</label>
                 <input type="text" class="form-control" id="videogame-console" name="console">
             </div>
+            <div class="mb-3">
+                <label for="videogame-coverImage" class="form-label">Url image cover:</label>
+                <input type="text" class="form-control" id="videogame-coverImage" name="coverImage">
+            </div>
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
                 <button type="submit" class="btn btn-primary me-3">
-                    Create new Kingdom Hearts Game
+                    Create
                 </button>
                 <button type="reset" class="btn btn-warning me-3">
                     Reset fields
