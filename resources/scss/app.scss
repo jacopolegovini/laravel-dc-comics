@@ -1,5 +1,23 @@
 @use "~bootstrap/scss/bootstrap" as *;
 
+a {
+    color: black;
+}
+
+header {
+    height: 100px;
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.list-link {
+    height: 100%;
+    gap: 50px;
+    align-items: center;
+}
+
 .list-card {
     flex-wrap: wrap;
     gap: 20px;
