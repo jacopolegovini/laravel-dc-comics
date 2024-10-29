@@ -1,1 +1,6 @@
 @use "~bootstrap/scss/bootstrap" as *;
+
+.list-card {
+    flex-wrap: wrap;
+    gap: 20px;
+}

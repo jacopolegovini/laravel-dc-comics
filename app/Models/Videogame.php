@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Videogame extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        "title",
+        "releaseYearJP",
+        "releaseYearWW",
+        "console",
+        "coverImage"
+    ];
 }
