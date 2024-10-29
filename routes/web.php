@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/videogame', [VideogameController::class, 'index'])->name('videogame');
+Route::get('/videogame', [VideogameController::class, 'index'])->name('videogame.index');
+
+Route::get('/videogame/{id}', [VideogameController::class, 'show'])->name("videogame.show");

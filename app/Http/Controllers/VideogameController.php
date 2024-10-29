@@ -34,7 +34,8 @@ class VideogameController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $videogames = Videogame::findOrFail($id);
+        return view("pages.videogame_show", compact("videogames"));
     }
 
     /**
