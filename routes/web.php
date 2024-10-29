@@ -19,4 +19,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/videogame', [VideogameController::class, 'index'])->name('videogame.index');
 
+Route::get('/videogame/create', [VideogameController::class, 'create'])->name("videogame.create");
+
 Route::get('/videogame/{id}', [VideogameController::class, 'show'])->name("videogame.show");
