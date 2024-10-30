@@ -28,3 +28,5 @@ Route::get('/videogame/{id}', [VideogameController::class, 'show'])->name("video
 Route::get('/videogame/{id}/edit', [VideogameController::class, 'edit'])->name("videogame.edit");
 
 Route::put('/videogame/{id}', [VideogameController::class, 'update'])->name("videogame.update");
+
+Route::delete('/videogame/{id}', [VideogameController::class, 'destroy'])->name("videogame.delete");

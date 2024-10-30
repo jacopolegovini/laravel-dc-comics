@@ -80,6 +80,9 @@ class VideogameController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $videogame = Videogame::findOrFail($id);
+        $videogame->delete();
+
+        return redirect()->route('videogame.index');
     }
 }
