@@ -24,3 +24,5 @@ Route::get('/videogame/create', [VideogameController::class, 'create'])->name("v
 Route::post('/videogame', [VideogameController::class, 'store'])->name("videogame.store");
 
 Route::get('/videogame/{id}', [VideogameController::class, 'show'])->name("videogame.show");
+
+Route::get('/videogame/{id}/edit', [VideogameController::class, 'edit'])->name("videogame.edit");

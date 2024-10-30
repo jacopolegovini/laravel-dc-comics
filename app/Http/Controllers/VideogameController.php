@@ -53,7 +53,8 @@ class VideogameController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $videogames = Videogame::findOrFail($id);
+        return view('pages.edit', compact('videogames'));
     }
 
     /**
