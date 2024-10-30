@@ -4,7 +4,7 @@
 
 @section("main-content")
 <main class="container">
-    <form action="{{route('videogame.update')}}" method="POST">
+    <form action="{{route('videogame.update', $videogames->id)}}" method="POST">
         @method('PUT')
         @csrf
 
@@ -33,7 +33,7 @@
             </div>
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
-                <button type="submit" class="btn btn-primary me-3">
+                <button type="submit" class="btn btn-success me-3">
                     Edit
                 </button>
                 <button type="reset" class="btn btn-warning me-3">

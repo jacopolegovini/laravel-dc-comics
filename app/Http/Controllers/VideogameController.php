@@ -62,7 +62,17 @@ class VideogameController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $videogame = Videogame::findOrFail($id);
+
+        $videogame->title = $data['title'];
+        $videogame->releaseYearJP = $data['releaseYearJP'];
+        $videogame->releaseYearWW = $data['releaseYearWW'];
+        $videogame->console = $data['console'];
+        $videogame->coverImage = $data['coverImage'];
+        $videogame->update();
+
+        return redirect()->route('videogame.index');
     }
 
     /**
