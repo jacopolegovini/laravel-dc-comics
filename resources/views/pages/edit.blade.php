@@ -4,36 +4,37 @@
 
 @section("main-content")
 <main class="container">
-    <form action="{{route('videogame.store')}}" method="POST">
+    <form action="{{route('videogame.update')}}" method="POST">
+        @method('PUT')
         @csrf
 
             <h1 class="mb-3">
-                Creating a new Kingdom Hearts Game:
+                Edit {{$videogames->title}}:
             </h1>
             <div class="mb-3">
                 <label for="videogame-title" class="form-label">Titolo:</label>
-                <input type="text" class="form-control" id="videogame-title" name="title">
+                <input type="text" class="form-control" id="videogame-title" name="title" value="{{$videogames->title}}">
             </div>
             <div class="mb-3">
                 <label for="videogame-releaseYearJP" class="form-label">Uscita in Giappone:</label>
-                <input type="text" class="form-control" id="releaseYearJP" name="releaseYearJP">
+                <input type="text" class="form-control" id="releaseYearJP" name="releaseYearJP" value="{{$videogames->releaseYearJP}}">
             </div>
             <div class="mb-3">
                 <label for="videogame-releaseYearWW" class="form-label">Uscita nel mondo:</label>
-                <input type="text" class="form-control" id="releaseYearWW" name="releaseYearWW">
+                <input type="text" class="form-control" id="releaseYearWW" name="releaseYearWW" value="{{$videogames->releaseYearWW}}">
             </div>
             <div class="mb-3">
                 <label for="videogame-console" class="form-label">Console:</label>
-                <input type="text" class="form-control" id="videogame-console" name="console">
+                <input type="text" class="form-control" id="videogame-console" name="console" value="{{$videogames->console}}">
             </div>
             <div class="mb-3">
                 <label for="videogame-coverImage" class="form-label">Url image cover:</label>
-                <input type="text" class="form-control" id="videogame-coverImage" name="coverImage">
+                <input type="text" class="form-control" id="videogame-coverImage" name="coverImage" value="{{$videogames->coverImage}}">
             </div>
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
                 <button type="submit" class="btn btn-primary me-3">
-                    Create
+                    Edit
                 </button>
                 <button type="reset" class="btn btn-warning me-3">
                     Reset fields

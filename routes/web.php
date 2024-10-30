@@ -26,3 +26,5 @@ Route::post('/videogame', [VideogameController::class, 'store'])->name("videogam
 Route::get('/videogame/{id}', [VideogameController::class, 'show'])->name("videogame.show");
 
 Route::get('/videogame/{id}/edit', [VideogameController::class, 'edit'])->name("videogame.edit");
+
+Route::put('/videogame', [VideogameController::class, 'update'])->name("videogame.update");

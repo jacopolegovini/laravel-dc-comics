@@ -28,8 +28,8 @@
                     </ul>
                 </div>
                 <div class="btn-list d-flex justify-content-center gap-3">
-                    <div class="btn btn-secondary"><a href="videogame/create">Update</a></div>
-                    <div class="btn btn-danger"><a href="videogame/create">Delete</a></div>
+                    <div class="btn btn-secondary"><a href="videogame/{{$videogame->id}}/edit">Update</a></div>
+                    <div class="btn btn-danger"><a href="videogame/{{$videogame->id}}">Delete</a></div>
                 </div>
             </div>
         </a>
