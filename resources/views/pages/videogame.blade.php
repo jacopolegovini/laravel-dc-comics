@@ -33,7 +33,7 @@
                     <form action="{{route('videogame.delete', $videogame->id)}}" method="POST">
                         @csrf
                         @method("DELETE")
-                        <div class="btn btn-danger"><a href="videogame/{{$videogame->id}}"><button type="submit">Delete</button></a></div>
+                        <button class="btn btn-danger" type="submit">Delete</button>
                     </form>
                 </div>
             </div>
