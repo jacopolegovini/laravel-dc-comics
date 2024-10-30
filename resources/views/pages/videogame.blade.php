@@ -7,6 +7,7 @@
     <h1>
         Videogame
     </h1>
+    <div class="btn btn-primary"><a href="videogame/create">Create a new Kingdom Hearts game</a></div>
     <div class="list-card d-flex">
         @forelse ($videogames as $key=>$videogame)
         <a href="videogame/{{$key + 1}}">
@@ -26,12 +27,15 @@
                         </li>
                     </ul>
                 </div>
+                <div class="btn-list d-flex justify-content-center gap-3">
+                    <div class="btn btn-secondary"><a href="videogame/create">Update</a></div>
+                    <div class="btn btn-danger"><a href="videogame/create">Delete</a></div>
+                </div>
             </div>
         </a>
         @empty
         <p>La lista dei videogiochi è vuota.</p>
         @endforelse
     </div>
-    <div><a href="videogame/create">Create a new Kingdom Hearts game</a></div>
 </main>
 @endsection
