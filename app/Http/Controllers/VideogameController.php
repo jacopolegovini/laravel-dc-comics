@@ -26,6 +26,15 @@ class VideogameController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'title' => 'required|min:3',
+            'releaseYearJP' => 'required|numeric|between:4,4',
+            'releaseYearWW' => 'required|numeric|between:4,4',
+            'console' => 'required|min:2',
+            'coverImage' => 'required|url',
+        ]);
+
+
         $data = $request->all();
 
         $newVideogame = new Videogame;

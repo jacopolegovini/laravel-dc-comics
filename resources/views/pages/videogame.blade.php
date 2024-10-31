@@ -42,5 +42,11 @@
         <p>La lista dei videogiochi è vuota.</p>
         @endforelse
     </div>
+    <button class="btn btn-danger delete-button" type="submit">test</button>
 </main>
+
+@endsection
+
+@section('additional-scripts')
+@vite("resources/js/confirmation-delete.js")
 @endsection
