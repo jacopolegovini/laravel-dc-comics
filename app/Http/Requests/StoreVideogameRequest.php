@@ -11,7 +11,7 @@ class StoreVideogameRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class StoreVideogameRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|min:3',
+            'releaseYearJP' => 'required|numeric|min:3|max:4',
+            'releaseYearWW' => 'required|numeric|min:3|max:4',
+            'console' => 'required|min:2',
+            'coverImage' => 'required|url',
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreVideogameRequest;
 use Illuminate\Http\Request;
 use App\Models\Videogame;
 
@@ -24,17 +25,17 @@ class VideogameController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreVideogameRequest $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'required|min:3',
-            'releaseYearJP' => 'required|numeric|min:4|max:4',
-            'releaseYearWW' => 'required|numeric|min:4|max:4',
-            'console' => 'required|min:2',
-            'coverImage' => 'required|url',
-        ]);
+        // $validatedData = $request->validate([
+        //     'title' => 'required|min:3',
+        //     'releaseYearJP' => 'required|numeric|min:4|max:4',
+        //     'releaseYearWW' => 'required|numeric|min:4|max:4',
+        //     'console' => 'required|min:2',
+        //     'coverImage' => 'required|url',
+        // ]);
 
-
+        $validated = $request->validated();
         $data = $request->all();
 
         $newVideogame = new Videogame;
@@ -71,6 +72,14 @@ class VideogameController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $validatedData = $request->validate([
+            'title' => 'required|min:3',
+            'releaseYearJP' => 'required|numeric|min:3|max:4',
+            'releaseYearWW' => 'required|numeric|min:3|max:4',
+            'console' => 'required|min:2',
+            'coverImage' => 'required|url',
+        ]);
+
         $data = $request->all();
         $videogame = Videogame::findOrFail($id);
 
