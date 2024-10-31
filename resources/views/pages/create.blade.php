@@ -20,9 +20,9 @@
                 Creating a new Kingdom Hearts Game:
             </h1>
             <div class="mb-3">
+                {{-- Implementato una validazione manuale per cancellare la risposta sbagliata e lasciare esclusivamente quelle corrette --}}
                 <label for="videogame-title" class="form-label">Titolo:</label>
                 <input type="text" class="form-control" id="videogame-title" name="title" value="{{(strlen(old('title')) >= 3) ? old('title') : ""}}">
-                @dump(old('title'))
             </div>
             <div class="mb-3">
                 <label for="videogame-releaseYearJP" class="form-label">Uscita in Giappone:</label>
