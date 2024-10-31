@@ -74,8 +74,8 @@ class VideogameController extends Controller
     {
         $validatedData = $request->validate([
             'title' => 'required|min:3',
-            'releaseYearJP' => 'required|numeric|min:3|max:4',
-            'releaseYearWW' => 'required|numeric|min:3|max:4',
+            'releaseYearJP' => 'required|numeric',
+            'releaseYearWW' => 'required|numeric',
             'console' => 'required|min:2',
             'coverImage' => 'required|url',
         ]);
